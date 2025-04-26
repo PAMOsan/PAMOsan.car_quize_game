@@ -1,0 +1,382 @@
+/* 全体のデザイン設定 */
+body {
+    font-family: "Verdana", "Hiragino Sans", "Meiryo", sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #282828;
+}
+
+/* タイトルのデザイン設定 */
+h1,
+h2 {
+    color: #ddd;
+    margin-top: 20px;
+}
+
+/* ゲームページとリザルトページのレイアウト */
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* 最大サイズでサイトを開いたときに中央に寄るように最大幅設定 */
+.column {
+    flex: 1;
+    max-width: 400px;
+}
+
+
+
+
+/* 解答欄、選択肢欄の幅設定 */
+#choices,
+#answer-area {
+    height: 650px;
+    width: 300px;
+}
+
+ul.choices,
+ul.draggable-list {
+    min-height: 650px;
+    max-height: 650px;
+    /* 枠の色 */
+    border: 2px solid #282828;
+    /* 枠の全体色 */
+    background-color: #404040;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+li.choices,
+li.draggable-list {
+    margin: 10px;
+}
+
+/* 解答リストのデザイン */
+.draggable-list {
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* ドラッグ＆ドロップの内容設定 */
+.draggable-list li {
+    background: #606060;
+    border: 5px solid #787878;
+    border-radius: 30px;
+    padding: 6px;
+    margin: 6px;
+    font-size: 20px;
+    color: #ddd;
+    cursor: grab;
+}
+
+
+
+
+/* ボタンのデザイン */
+button {
+    all: unset;
+    background: #606060;
+    border: 5px solid #787878;
+    color: #ddd;
+    margin-top: 50px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+
+
+/* リザルトのデザイン */
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#score {
+    color: #ddd;
+    margin-top: 30px;
+}
+
+
+/* リザルトの「ページ」のデザイン */
+.result-page {
+    margin: 0 auto;
+    color: #ddd;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+    padding: 20px 10px;
+}
+
+.result-container {
+    display: flex;
+    /* gap: 10px; */
+    gap: 20px;
+    /* margin-top: 0; */
+    margin-top: 30px;
+    /* flex-wrap: wrap; */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+    gap: 10px;
+}
+
+#your-answers,
+#correct-answers {
+    list-style: none;
+    padding: 0;
+    /* margin: 0; */
+}
+
+.start-page {
+    text-align: center;
+}
+
+
+/* リザルトページの「表」デザイン */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* テーブルのセルの間隔を詰める */
+}
+
+/* リザルト表の「見出し」デザイン */
+table th,
+table tr {
+    /* セル内の余白を少なく */
+    padding: 8px 12px;
+    text-align: center;
+    background-color: #404040;
+    color: #ddd;
+    border: 1px solid #ddd;
+}
+
+/* リザルト表の「表」部分デザイン */
+table td {
+    /* セル内の余白を少なく */
+    padding: 8px 12px;
+    text-align: center;
+    background-color: #606060;
+    border: 1px solid #ddd;
+}
+
+#final-score {
+    font-size: 18px;
+    margin-top: 10px;
+    /* 最終スコアの表示の余白を減らす */
+}
+
+
+
+
+
+
+
+
+
+
+/* 全体のデザイン設定
+body {
+    font-family: "Verdana", "Hiragino Sans", "Meiryo", sans-serif;
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    color: #31444d;
+    margin-top: 20px;
+}
+
+/* ゲームページとリザルトページのレイアウト 
+.game-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* 最大サイズでサイトを開いたときに中央に寄るように最大幅設定 
+.column {
+    flex: 1;
+    max-width: 400px;
+}
+
+#choices,
+#answer-area {
+    height: 620px;
+    width: 300px;
+}
+
+ul.choices,
+ul.draggable-list {
+    min-height: 650px;
+    max-height: 650px;
+    border: 2px solid #94a4a5;
+    background-color: #94a4a5;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+}
+
+li.choices,
+li.draggable-list {
+    margin: 10px;
+}
+
+/* 解答リストのデザイン 
+.draggable-list {
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.draggable-list li {
+    background: #597c8b;
+    border: 5px solid #31444d;
+    border-radius: 30px;
+    padding: 6px;
+    margin: 6px;
+    font-size: 20px;
+    color: #ffffff;
+    cursor: grab;
+}
+
+/* ボタンのデザイン 
+button {
+    all: unset;
+    background: #31444d;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* 結果のデザイン 
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#score {
+    color: white;
+    margin-top: 30px;
+}
+
+/* リザルトページのデザイン 
+.result-page {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 600px;
+}
+
+.result-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#your-answers, #correct-answers {
+    list-style: none;
+    padding: 0;
+}
+
+.start-page {
+    text-align: center;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #31444d;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* リザルトページのデザイン 
+.result-page {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 中央揃えをやめて、上寄せに変更 
+    flex-direction: column;
+    padding: 20px 10px; /* 上下左右に適度なパディングを追加 
+}
+
+.result-container {
+    display: flex;
+    gap: 10px; /* 要素間の間隔を狭く 
+    margin-top: 0; /* 上部のマージンを削除 
+    flex-wrap: wrap; /* ラップさせて表示領域に収める 
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 要素間の間隔を狭く 
+}
+
+#your-answers, #correct-answers {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* 余分なマージンを削除 
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* テーブルのセルの間隔を詰める 
+}
+
+table th, table td {
+    padding: 8px 12px; /* セル内の余白を少なく 
+    text-align: left;
+}
+
+table th {
+    background-color: #31444d;
+    color: white;
+}
+
+table td {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#final-score {
+    font-size: 18px;
+    margin-top: 10px; /* 最終スコアの表示の余白を減らす 
+} */
