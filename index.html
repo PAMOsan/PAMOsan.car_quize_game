@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>自動車の乗車、発進、停車の手順クイズ</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SortableJSライブラリ -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+
+<body>
+    <!-- スタートページ -->
+    <div id="start-page">
+        <h1>自動車の手順クイズへようこそ！</h1>
+        <h2>「選択肢欄」から「解答欄」にドラッグ、またはクリックして、正しい順番に並べ替えましょう。</h2>
+        <button id="start-btn">スタート</button>
+    </div>
+
+    <!-- フィードバック画像（正解／不正解） -->
+    <img id="feedback-image" src="" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  z-index: 999;
+">
+
+    <!-- クイズページ -->
+    <div id="game-page" class="game-container" style="display: none;">
+        <h1>自動車の乗車、発進、停車の手順クイズ</h1>
+        <h2 id="stage-subtitle">乗車手順
+            （ステージ <span id="stage-number">1</span>/3）</h2>
+
+        <div class="game-container">
+            <div class="column">
+                <h2>解答欄</h2>
+                <ul id="answer-area" class="draggable-list"></ul>
+            </div>
+            <div class="column">
+                <h2>選択肢欄</h2>
+                <ul id="choices" class="draggable-list"></ul>
+            </div>
+        </div>
+
+        <button id="submit">決定</button>
+        <p id="result"></p>
+
+        <p id="score">スコア: 0</p>
+        <button id="reset" style="display: none;">もう一度遊ぶ</button>
+    </div>
+
+    <!-- リザルトページ -->
+    <div id="result-page" class="result-page" style="display: none;">
+        <h2>Result</h2>
+        <div class="result-container"></div>
+        <p>最終スコア: <span id="final-score"></span></p>
+        <div id="result-details"></div>
+        <button id="reset-result">もう一度遊ぶ</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
